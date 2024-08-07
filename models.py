@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, ARRAY
-from database import Base
+from database import Base,engine
 
 class User(Base):
     __tablename__ = "users"
@@ -10,5 +10,6 @@ class User(Base):
     gender = Column(String)
     email = Column(String, unique=True, index=True)
     city = Column(String, index=True)
-    interests = Column(ARRAY(String))
-
+    interests = Column(String)
+# Create the tables in the database
+Base.metadata.create_all(bind=engine)

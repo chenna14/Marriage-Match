@@ -53,3 +53,23 @@ Include a brief report explaining your approach and any assumptions made.
 - FastAPI
 - SQLAlchemy
 - SQLite
+
+
+### Update
+For update using a Patch request, I have added a new endpoint in the main.py file. The endpoint is '/update_user/{user_id}' which takes the user_id as a parameter and the updated data in the request body. The endpoint updates the user details for the given user_id.
+
+### Delete
+For delete using a Delete request, I have added a new endpoint in the main.py file. The endpoint is '/delete_user/{user_id}' which takes the user_id as a parameter. The endpoint deletes the user profile for the given user_id.
+
+### Match
+For finding matches for a user, I have added a new endpoint in the main.py file. The endpoint is '/match/{user_id}' which takes the user_id as a parameter. The endpoint finds potential matches for a user based on their profile information.
+
+Matches are found based on interests and opposite gender.
+Several potential updates like diistance based matching,age based matching, etc can be added.
+
+### Email Validation
+I am using default email validation library.
+
+
+### How to run the project
+uvicorn main:app --reload
